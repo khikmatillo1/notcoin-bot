@@ -2,7 +2,7 @@ import os
 
 import telebot
 
-BOT_TOKEN = os.environ.get('7370183618:AAHwTafN1cXrCR-FOv9T6zcWNSdu4NUFjh0')
+BOT_TOKEN = os.environ.get('@nnotcoinn_bot')
 
 bot = telebot.TeleBot(BOT_TOKEN) 
 
