@@ -45,10 +45,10 @@ def help_command(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Insert your API token here
-    TOKEN = 'YOUR_API_TOKEN_HERE'
+    TOKEN = '7370183618:AAHwTafN1cXrCR-FOv9T6zcWNSdu4NUFjh0'
 
     # Create the Updater and pass it your bot's token
-    updater = Updater(TOKEN)
+    updater = Updater(token=TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
