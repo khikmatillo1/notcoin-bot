@@ -1,6 +1,9 @@
-import telegram
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from typing import Final
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, filters
+
+TOKEN: Final = '7370183618:AAHwTafN1cXrCR-FOv9T6zcWNSdu4NUFjh0'
+BOT_USERNAME: Final = '@nnotcoinn_bot'
 
 # Define the conversation states
 BUY_SELL, CHOOSE_COIN, AMOUNT, PAYMENT_INFO = range(4)
@@ -98,7 +101,7 @@ def cancel(update, context):
     return ConversationHandler.END
 
 def main():
-    updater = Updater("7370183618:AAHwTafN1cXrCR-FOv9T6zcWNSdu4NUFjh0", use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     conv_handler = ConversationHandler(
@@ -115,5 +118,5 @@ def main():
     dispatcher.add_handler(conv_handler)
     updater.start_polling()
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
